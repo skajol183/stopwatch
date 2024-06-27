@@ -3,6 +3,8 @@ import "./index.scss";
 
 const StopWatch = () => {
   const [isPause, setIsPause] = useState("Start");
+  const [isReset, setIsReset] = useState(false);
+  const [isStop, setIsStop] = useState(false);
   const [isRunning, setIsRunning] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
 
@@ -20,10 +22,16 @@ const StopWatch = () => {
 
   const handleStartPause = () => {
     setIsRunning(!isRunning);
-    setIsPause("Pause");
+    if (isRunning === true) {
+      setIsPause("Resume");
+    } else {
+      setIsPause("Pause");
+    }
   };
 
   const handleStop = () => {
+    setIsStop(true)
+    setIsPause("Start");
     setIsRunning(false);
     setTimeout(() => {
       setElapsedTime(0);
@@ -31,6 +39,8 @@ const StopWatch = () => {
   };
 
   const handleReset = () => {
+    setIsReset(true);
+    setIsPause("Start");
     setIsRunning(false);
     setElapsedTime(0);
   };
