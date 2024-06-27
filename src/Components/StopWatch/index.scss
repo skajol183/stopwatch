@@ -1,5 +1,7 @@
 .app-container {
-  background-color: lightblue;
+  //   background-color: lightblue;
+  background-image: url("../../Images//timer.jpg");
+  background-size: cover;
   .stopwatch-container {
     display: flex;
     flex-direction: column;
@@ -7,9 +9,10 @@
     justify-content: center;
     height: 100vh;
     .stopwatch {
-      color: #333333;
+      color: darkslateblue;
       font-family: "Roboto";
       font-weight: 500;
+      font-size: 64px;
     }
     .timer-container {
       display: flex;
@@ -70,12 +73,6 @@
         }
       }
     }
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .stopwatch {
-    font-size: 64px;
   }
 }
 
