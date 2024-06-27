@@ -1,6 +1,8 @@
 # stopwatch
 In this project, let's build a **Stopwatch** by applying the concepts we have learned till now.
 
+You can try using the link
+[Click here to see the live demo](https://stopwatch-one-weld.vercel.app/)
 <br/>
 
 ### Set Up Instructions
